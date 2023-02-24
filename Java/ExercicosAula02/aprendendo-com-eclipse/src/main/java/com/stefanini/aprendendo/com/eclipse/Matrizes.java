@@ -20,7 +20,7 @@ for(Integer i = 0; i < linha; i++){
         
     Integer nRandom = ThreadLocalRandom.current().nextInt(1,100);
     numeros[i][c] = nRandom;
-        System.out.println(numeros[i][c]);
+    System.out.println(numeros[i][c]);
 }
 }
     }
