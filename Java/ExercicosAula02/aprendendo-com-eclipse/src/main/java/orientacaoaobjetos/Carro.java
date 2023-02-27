@@ -16,7 +16,16 @@ public class Carro {
     private String placa;
     private Integer velocidade;
     private Double roda;
-    private String bancos;
+    private Integer bancos;
+    private String modelo;
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 
     public Carro() {
         System.out.println("Construido o carro");
@@ -80,12 +89,14 @@ public class Carro {
         this.roda = roda;
     }
 
-    public String getBancos() {
+    public Integer getBancos() {
         return bancos;
     }
 
-    public void setBancos(String bancos) {
+    public void setBancos(Integer bancos) {
         this.bancos = bancos;
     }
+
+    
 
 }
