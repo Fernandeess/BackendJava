@@ -9,24 +9,30 @@ package com.stefanini.curso.java.basico;
  * @author mfrodrigues2
  */
 public class Main {
-    public static void main(String[] args) {
-        Carro bmw = new Carro();
+    public static void main(String[] args)  {
+        BMW bmw = new BMW();
         bmw.setModelo("M3");
         bmw.setMarca("BMW"); 
         bmw.setQuilometrosPorLitro(7.5);
         bmw.setTaxaAceleracao(50);
-        bmw.setVelocidadeMaxima(280.0);
+        try{
+            bmw.setVelocidadeMaxima(150.00);
+                }catch(Exception e){
+            System.out.println(e);
+        }finally{System.out.println("Passou aqui");}
         
         System.out.println(bmw.getMarca());
         System.out.println(bmw.getModelo());
         System.out.println(bmw.getQuilometrosPorLitro());
         System.out.println(bmw.getTaxaAceleracao());
         System.out.println(bmw.getVelocidadeMaxima());
-   
+        
         bmw.acelerar();
         bmw.frear();
-        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 0.0 , 10.0 ,0.0 ));
+        bmw.acionarTurbo();
+  
         System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 10.0  ));
+        
         
         
         Tesla tesla = new Tesla();

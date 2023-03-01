@@ -11,7 +11,7 @@ package com.stefanini.curso.java.basico;
 /*
 
 */
-public class BMW extends Carro{ 
+public class BMW extends Carro implements Esportivo{ 
 
     @Override
     String acelerar() { //sobrescrita do metodo ///
@@ -19,5 +19,11 @@ public class BMW extends Carro{
         String msgAcelerar = "BMW Acelera loucamente";
         return msgAcelerar;
     }
+
+    @Override
+    public void acionarTurbo() {
+    System.out.println("Turbo");
+    }
+    
     
 }

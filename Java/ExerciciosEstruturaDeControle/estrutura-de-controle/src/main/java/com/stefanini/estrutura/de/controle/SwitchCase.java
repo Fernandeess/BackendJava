@@ -10,8 +10,8 @@ package com.stefanini.estrutura.de.controle;
  */
 public class SwitchCase {
 
-    public static void main(String[] args) {
-        Integer mes = 2;
+    public static void main(String[] args) throws Exception {
+        Integer mes = 20;
         switch (mes) {
             case 1:
                 System.out.println("Janeiro");
@@ -50,7 +50,7 @@ public class SwitchCase {
                 System.out.println("Dezembro");
                 break;
             default:
-                System.out.println("Mês Invalido");
+                throw new Exception("Mês invalido");
 
         }
     }

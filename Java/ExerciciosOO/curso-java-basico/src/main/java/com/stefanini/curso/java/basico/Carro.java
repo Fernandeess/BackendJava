@@ -10,6 +10,11 @@ package com.stefanini.curso.java.basico;
  */
 public class Carro {
     /*
+    Se uma clase for abstract ela não pode mais ser instanciada, porem as classe filhas conseguem ser instaciadas normalmente ou seja e necessario criar uma classe e utilizar o extends para poder utilizar os metodos e atributos t
+    quando um metodo for abstract ele so pode ser usado pela classe filho
+    TODAS AS CLASSES SÂO FILHAS DA CLASSE OBJECT
+    */
+    /*
     Modificadores de acesso
     Default => ausencia do modificador de acesso Não e uma (palavra chave reservada).Acessivel propria classe ou classe de um mesmo pacote
     Public => Acessivel propria classe ,classe mesmo pacote, subclasse (extends),todas as demais classes.
@@ -58,8 +63,13 @@ public class Carro {
         return velocidadeMaxima;
     }
 
-    public void setVelocidadeMaxima(Double velocidadeMaxima) {
-        this.velocidadeMaxima = velocidadeMaxima;
+    public void setVelocidadeMaxima(Double velocidadeMaxima) throws Exception  {
+        if(velocidadeMaxima<0){
+            throw new Exception("Valor é invalido");
+        }else{
+            this.velocidadeMaxima = velocidadeMaxima;
+        }
+        
     }
 
     public Integer getTaxaAceleracao() {
@@ -86,9 +96,9 @@ public class Carro {
         System.out.println("Freando....");
     }
     Double calcularTaxaAceleracao(Double velocidadeFinal, Double velocidadeInicial, Double tempoFinal, Double tempoInicial){
-        return (velocidadeFinal - velocidadeInicial) / (tempoFinal - tempoInicial) * 3.6;
+        return ((velocidadeFinal - velocidadeInicial) / (tempoFinal - tempoInicial) * 3.6);
     }
     Double calcularTaxaAceleracao(Double velocidadeFinal, Double tempoFinal){
-        return (velocidadeFinal - 0) / (tempoFinal - 0) * 3.6; //sobrecarga
+        return( (velocidadeFinal - 0) / (tempoFinal - 0) * 3.6); //sobrecarga
     }
 }
