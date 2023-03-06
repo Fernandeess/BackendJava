@@ -9,19 +9,21 @@ package com.stefanini.exercicio;
  * @author mfrodrigues2
  */
 public class CalculadoraTransporte {
-   public Double calcularPassagensMensais(Double pricePassagem, Integer qntdDias){
-       if(qntdDias > 31|| qntdDias < 0){
-           System.out.println("Valor Invalido");
-           
-       }else{
-       Double totalGastoMensal;
-       Double totalGastoDiario;
-        totalGastoDiario = pricePassagem * 2;
-        totalGastoMensal = totalGastoDiario * qntdDias;
-       return totalGastoMensal;
-       }
-       return null;
-      
-   }
-    
+
+    public Double calcularPassagensMensais(Double pricePassagem, Integer qntdDias) {
+        if (qntdDias > 31 || qntdDias < 0) {
+            System.out.println("Valor Invalido");
+
+        } else {
+            Double totalGastoMensal;
+            Double totalGastoDiario;
+            totalGastoDiario = pricePassagem * 2;
+            totalGastoMensal = totalGastoDiario * qntdDias;
+
+            return totalGastoMensal;
+        }
+        return null;
+
+    }
+
 }

@@ -9,8 +9,18 @@ package com.stefanini.exercicio;
  * @author mfrodrigues2
  */
 public class Pessoa {
-    String nome;
-    String gastoMensal;
+
+    String nome = "Unnamed";
+    Double gastoMensal = 0.0;
+    Integer pontos = 0;
+
+    public Integer getPontos() {
+        return pontos;
+    }
+
+    public void setPontos(Integer pontos) {
+        this.pontos = pontos;
+    }
 
     public String getNome() {
         return nome;
@@ -20,11 +30,15 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getGastoMensal() {
+    public Double getGastoMensal() {
         return gastoMensal;
     }
 
-    public void setGastoMensal(String gastoMensal) {
+    public void setGastoMensal(Double gastoMensal) {
         this.gastoMensal = gastoMensal;
+    }
+
+    public void exibirDados() {
+        System.out.println(String.format("\n\n\nNome: %s \nGasto mensal transporte(Trem): %.2f\nPontos:%d \n\n\n", getNome(), getGastoMensal(), getPontos()));
     }
 }
